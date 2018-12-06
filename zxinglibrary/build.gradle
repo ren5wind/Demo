@@ -1,0 +1,25 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api files('libs/core-3.3.0.jar')
+    compileOnly "com.android.support:appcompat-v7:25.3.1"
+    compileOnly "com.android.support:design:25.3.1"
+    compileOnly "com.android.support:support-v4:25.3.1"
+    compileOnly "com.android.support:support-vector-drawable:25.3.1"
+
+}
